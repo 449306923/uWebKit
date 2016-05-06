@@ -144,7 +144,7 @@ public class WebQueryExample : MonoBehaviour
           payload: msgJSON
       };
 
-      window.atomicQuery({
+      window.uwkQuery({
           request: JSON.stringify(data),
           persistent: false,
           onSuccess: function(response) { document.getElementById('Messages').innerText = response; },

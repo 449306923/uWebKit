@@ -1,6 +1,6 @@
 /******************************************
-  * uWebKit 
-  * (c) 2014 THUNDERBEAST GAMES, LLC
+  * uWebKit
+  * (c) 2014-2016 THUNDERBEAST GAMES, LLC
   * http://www.uwebkit.com
   * sales@uwebkit.com
 *******************************************/
@@ -117,7 +117,7 @@ public class JavascriptExample : MonoBehaviour
 function getUnityVersion() {
 
     return UWKExample.unityVersion;
-    
+
 }
 
 </script>

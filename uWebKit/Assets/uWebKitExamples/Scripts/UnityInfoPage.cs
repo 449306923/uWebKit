@@ -62,7 +62,7 @@ public class UnityInfoPage
 		<style type=""text/css"">
 		body
 		{
-			background-color: transparent;
+			background-color: white;
 		}
 		h1
 		{
@@ -86,7 +86,7 @@ public class UnityInfoPage
 		          payload: msgJSON
 		      };
 
-		      window.atomicQuery({
+		      window.uwkQuery({
 		          request: JSON.stringify(data),
 		          persistent: false,
 		          onSuccess: function(response) { 

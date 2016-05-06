@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+/******************************************
+  * uWebKit
+  * (c) 2014-2016 THUNDERBEAST GAMES, LLC
+  * http://www.uwebkit.com
+  * sales@uwebkit.com
+*******************************************/
+
+using UnityEngine;
 using System.IO;
 using UnityEditor;
 using System.Collections;
@@ -9,7 +16,7 @@ public static class UWKEditorUtils
     public static string GetUWebKitInternalPath()
     {
         DirectoryInfo dataPath = new DirectoryInfo(Application.dataPath);
-        FileInfo[] fileInfos = dataPath.GetFiles("UWKEditorUtils.cs", SearchOption.AllDirectories ); 
+        FileInfo[] fileInfos = dataPath.GetFiles("UWKEditorUtils.cs", SearchOption.AllDirectories );
 
         if (fileInfos == null || fileInfos.Length == 0)
         {

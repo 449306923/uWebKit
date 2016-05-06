@@ -1,6 +1,6 @@
 /******************************************
-  * uWebKit 
-  * (c) 2014 THUNDERBEAST GAMES, LLC
+  * uWebKit
+  * (c) 2014-2016 THUNDERBEAST GAMES, LLC
   * http://www.uwebkit.com
   * sales@uwebkit.com
 *******************************************/
@@ -24,7 +24,7 @@ public class SceneExample : MonoBehaviour
 
 	void OnGUI ()
 	{
-		
+
 		Rect brect = new Rect (0, 0, 120, 40);
 
 		if (UWKCore.BetaVersion)
@@ -32,8 +32,8 @@ public class SceneExample : MonoBehaviour
 			GUI.Label(new Rect (0, 0, 200, 60), "UWEBKIT BETA VERSION\nCheck http://www.uwebkit.com\nfor updates");
 			brect.y += 50;
 		}
-				
-		if (GUI.Button (brect, "Back")) 
+
+		if (GUI.Button (brect, "Back"))
 		{
             SceneManager.LoadScene("ExampleLoader");
 		}
@@ -41,11 +41,11 @@ public class SceneExample : MonoBehaviour
 		brect.y += 50;
 
 		if (SourceCodePopup.usePopup)
-		if (GUI.Button (brect, "View Source")) 
-		{	
+		if (GUI.Button (brect, "View Source"))
+		{
 			if (gameObject.GetComponent<SourceCodePopup>() == null)
 			{
-				sourcePopup = gameObject.AddComponent<SourceCodePopup>(); 		
+				sourcePopup = gameObject.AddComponent<SourceCodePopup>();
 				sourcePopup.URL = "https://github.com/uWebKit/uWebKit/blob/uWebKit2-Beta/uWebKit/Assets/uWebKitExamples/Scripts/WebTexture.cs";
 				webTexture.HasFocus = false;
 			}
@@ -53,18 +53,18 @@ public class SceneExample : MonoBehaviour
 			{
 				gameObject.SendMessage("SourcePopupClosed");
 			}
-		}		
+		}
 
-				
+
 	}
 
 	void SourcePopupClosed()
 	{
-		UnityEngine.Object.Destroy(gameObject.GetComponent<SourceCodePopup>());		
+		UnityEngine.Object.Destroy(gameObject.GetComponent<SourceCodePopup>());
 		webTexture.HasFocus = true;
 	}
 
 	SourceCodePopup sourcePopup;
 
-	
+
 }

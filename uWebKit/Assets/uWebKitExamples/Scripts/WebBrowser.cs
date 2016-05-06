@@ -516,7 +516,7 @@ class WebBrowser : MonoBehaviour
 
 				string URL = currentURL.Replace (" ", "%20");
 
-				if (!URL.Contains ("."))
+				if (!URL.Contains (".") && !URL.StartsWith("file://"))
 					URL = "http://www.google.com/search?q=" + URL;
 
 				if (!URL.Contains ("://"))
@@ -553,7 +553,7 @@ class WebBrowser : MonoBehaviour
 
 		if (view != null) {
 
-            view.DrawTexture(browserRect, false);            
+            view.DrawTexture(browserRect);            
 			//TODO: uWebKit3
 			//view.DrawTextIME ((int)browserRect.x, (int)browserRect.y);
 		}

@@ -1,3 +1,10 @@
+/******************************************
+  * uWebKit
+  * (c) 2014-2016 THUNDERBEAST GAMES, LLC
+  * http://www.uwebkit.com
+  * sales@uwebkit.com
+*******************************************/
+
 using UnityEngine;
 using System;
 using System.IO;
@@ -37,8 +44,19 @@ public class UWKPlugin
         app["unityVersion"] = Application.unityVersion;
         app["targetFrameRate"] = Application.targetFrameRate;
         app["graphicsDeviceVersion"] = SystemInfo.graphicsDeviceVersion;
-        app["hasProLicense"] = Application.HasProLicense();
+
+        app["rootCacheFolder"] = UWKConfig.RootCacheFolder;
+        app["cacheName"] = UWKConfig.CacheName;
+
+        app["userAgent"] = UWKConfig.UserAgent;
+        app["productVersion"] = UWKConfig.UserAgentProductVersion;
+        app["debugPort"] = UWKConfig.ChromiumDebugPort;
+
         //app["imeEnabled"] = UWKCore.IMEEnabled;
+
+        // WARNING: modifying the following line to obscure the version of Unity running 
+        // violates the terms of the uWebKit3 EULA
+        app["hasProLicense"] = Application.HasProLicense();
 
         // TODO: Proxy Support
         /*
@@ -83,15 +101,18 @@ public class UWKPlugin
 
     static void beta(int betaDays)
     {
-		string betaMessage = "If you require a non-expiring build without beta watermark, please visit http://uwebkit.com/store/ for purchasing information (15% discount during beta period)";
+		string betaMessage = "Please check http://www.uwebkit.com for updates";
+
+		if (betaDays == 99)
+			betaMessage = "This is a beta build and you will receive this notification upon initial project play.\n\nThe current version of uWebKit is always available to download at http://uwebkit.com/";
 
         UWKCore.BetaVersion = true;
 		if (betaDays == -1)
         {
             Debug.LogError("uWebKit Beta Expired");
-#if UNITY_EDITOR                
-			EditorUtility.DisplayDialog("uWebKit Beta Expired", "This BETA version of uWebKit has expired.\nPlease check http://www.uwebkit.com for a new version.\n\n" + betaMessage, "Ok");
-#endif                
+#if UNITY_EDITOR
+			EditorUtility.DisplayDialog("uWebKit Beta Expired", "This BETA version of uWebKit has expired.\nPlease check http://www.uwebkit.com for a new version.\n\n", "Ok");
+#endif
         }
         else
         {
@@ -100,9 +121,12 @@ public class UWKPlugin
             if (betaDays == 0)
                 message = String.Format("There is less than a day left of this expiring uWebKit BETA");
 
+			if (betaDays == 99)
+				message = "Thanks for licensing uWebKit3";
+
             if (!UWK_HasDisplayedBetaMessage())
             {
-#if UNITY_EDITOR                
+#if UNITY_EDITOR
 				EditorUtility.DisplayDialog("uWebKit BETA Version", "\n" + message + "\n\n"+ betaMessage, "Ok");
 #endif
             }
@@ -175,6 +199,9 @@ public class UWKPlugin
 
     [DllImport("UWKPlugin")]
     public static extern void UWK_MsgWebMessageResponse(uint browserID, double queryID, bool success, [MarshalAs(UnmanagedType.LPStr)]String response);
+
+    [DllImport("UWKPlugin")]
+    public static extern void UWK_MsgSetZoomLevel(uint browserID, float zoom);
 
     [DllImport("UWKPlugin")]
     public static extern void UWK_SetGlobalBoolProperty([MarshalAs(UnmanagedType.LPStr)]String globalVarName, [MarshalAs(UnmanagedType.LPStr)]String propertyName, bool value);

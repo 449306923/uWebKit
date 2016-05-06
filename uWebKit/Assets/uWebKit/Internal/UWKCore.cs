@@ -1,3 +1,9 @@
+/******************************************
+  * uWebKit
+  * (c) 2014-2016 THUNDERBEAST GAMES, LLC
+  * http://www.uwebkit.com
+  * sales@uwebkit.com
+*******************************************/
 
 using UnityEngine;
 using System;
@@ -115,7 +121,7 @@ public class UWKCore : MonoBehaviour
 
 			webView.ProcessUWKEvent (e);
 		}
-		
+
 	}
 
     public static bool BetaVersion = false;

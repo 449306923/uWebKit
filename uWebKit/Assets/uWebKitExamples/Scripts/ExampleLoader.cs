@@ -1,4 +1,11 @@
 ﻿
+/******************************************
+  * uWebKit
+  * (c) 2014-2016 THUNDERBEAST GAMES, LLC
+  * http://www.uwebkit.com
+  * sales@uwebkit.com
+*******************************************/
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
@@ -9,8 +16,8 @@ using UnityEditor;
 
 /// <summary>
 /// Example of using UWKCore across multiple scene loads (and unloads)
-/// Please note to view this sample, the included example scenes (including the ExampleLoader scene) 
-/// must be added to the Build Settings 
+/// Please note to view this sample, the included example scenes (including the ExampleLoader scene)
+/// must be added to the Build Settings
 /// </summary>
 public class ExampleLoader : MonoBehaviour
 {
@@ -58,7 +65,7 @@ public class ExampleLoader : MonoBehaviour
 
         view.ProcessMouse(mousePos);
 
-        // process keyboard     
+        // process keyboard
         if (Event.current.isKey)
             view.ProcessKeyboard(Event.current);
 

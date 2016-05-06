@@ -1,3 +1,10 @@
+/******************************************
+  * uWebKit
+  * (c) 2014-2016 THUNDERBEAST GAMES, LLC
+  * http://www.uwebkit.com
+  * sales@uwebkit.com
+*******************************************/
+
 using UnityEngine;
 using System;
 using System.Collections;
@@ -249,11 +256,11 @@ public class UWKWebView : MonoBehaviour
 
     public void DrawTexture(Rect position, bool alphaBlend = true)
     {
-		float th = (float)MaxHeight;
+        float th = (float)MaxHeight;
 
-		Rect sourceRect = new Rect(0, 0, Width, Height);
+        Rect sourceRect = new Rect(0, 0, Width, Height);
 
-		sourceRect.x = 0 ;
+        sourceRect.x = 0;
 
 #if !UNITY_EDITOR_OSX && UNITY_STANDALONE_WIN
         sourceRect.y = 0.0f;
@@ -262,9 +269,9 @@ public class UWKWebView : MonoBehaviour
 #endif
 
         sourceRect.width = sourceRect.width / (float)MaxWidth;
-        sourceRect.height = sourceRect.height / th ;
+        sourceRect.height = sourceRect.height / th;
 
-        GUI.DrawTextureWithTexCoords ( position , WebTexture , sourceRect ,  alphaBlend );
+        GUI.DrawTextureWithTexCoords(position, WebTexture, sourceRect, alphaBlend);
     }
 
     /// <summary>
@@ -299,25 +306,25 @@ public class UWKWebView : MonoBehaviour
         UWKPlugin.UWK_MsgLoadHTML(ID, html, url);
     }
 
-	/// <summary>
-	/// Execute Javascript on the page discarding any return value
-	/// </summary>
-	public void ExecuteJavascript(string javascript)
-	{
-		UWKPlugin.UWK_MsgExecuteJavaScript(ID, javascript);
-	}
-		
+    /// <summary>
+    /// Execute Javascript on the page discarding any return value
+    /// </summary>
+    public void ExecuteJavascript(string javascript)
+    {
+        UWKPlugin.UWK_MsgExecuteJavaScript(ID, javascript);
+    }
+
     /// <summary>
     /// Evaluates Javascript on the page
     /// Example with return value: EvaluateJavascript("document.title", (success, value) => { Debug.Log(value); });
     /// </summary>
     public void EvaluateJavascript(string javascript, JSEvalDelegate callback = null)
     {
-		if (callback == null) 
-		{
-			ExecuteJavascript (javascript);
-			return;
-		}
+        if (callback == null)
+        {
+            ExecuteJavascript(javascript);
+            return;
+        }
 
         evalCallbacks[evalIDCounter] = callback;
         UWKPlugin.UWK_MsgEvalJavaScript(ID, evalIDCounter, javascript);
@@ -479,6 +486,14 @@ public class UWKWebView : MonoBehaviour
     public void Navigate(Navigation n)
     {
         UWKPlugin.UWK_MsgNavigate(ID, (int)n);
+    }
+
+    /// <summary>
+    /// Sets the zoom factor of the page, specifying 0.0f reset zoom
+    /// </summary>
+    public void SetZoomLevel(float zoom)
+    {
+        UWKPlugin.UWK_MsgSetZoomLevel(ID, zoom);
     }
 
     public static void SetGlobalProperty(string globalVarName, string propertyName, object value)
