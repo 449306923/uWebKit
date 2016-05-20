@@ -1,103 +1,101 @@
 fileFormatVersion: 2
-guid: b42bda2d7c84546b88e5cf28730d6823
-timeCreated: 1462501167
-licenseType: Free
+guid: 589885640c41b426a9f0e09276094dc3
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 16
   fileIDToRecycleName:
-    100000: bridge01
-    100002: Cabin
-    100004: Clouds
-    100006: creek01
-    100008: creek02
-    100010: creek_waterfall
-    100012: //RootNode
-    100014: fence01
-    100016: fence02
-    100018: fence03
+    100000: //RootNode
+    100002: Perif04
+    100004: Perif03
+    100006: Perif05
+    100008: Perif01
+    100010: ground01
+    100012: Perif02
+    100014: Clouds
+    100016: rock01
+    100018: Cabin
     100020: fence04
-    100022: fenceSign01
-    100024: fenceSign02
-    100026: ground01
-    100028: ground02
-    100030: path01
-    100032: path02
-    100034: Perif01
-    100036: Perif02
-    100038: Perif03
-    100040: Perif04
-    100042: Perif05
-    100044: rock01
+    100022: fence03
+    100024: fence01
+    100026: fenceSign01
+    100028: path02
+    100030: fenceSign02
+    100032: creek02
+    100034: fence02
+    100036: bridge01
+    100038: path01
+    100040: creek01
+    100042: creek_waterfall
+    100044: ground02
     100046: rockMtn
-    400000: bridge01
-    400002: Cabin
-    400004: Clouds
-    400006: creek01
-    400008: creek02
-    400010: creek_waterfall
-    400012: //RootNode
-    400014: fence01
-    400016: fence02
-    400018: fence03
+    400000: //RootNode
+    400002: Perif04
+    400004: Perif03
+    400006: Perif05
+    400008: Perif01
+    400010: ground01
+    400012: Perif02
+    400014: Clouds
+    400016: rock01
+    400018: Cabin
     400020: fence04
-    400022: fenceSign01
-    400024: fenceSign02
-    400026: ground01
-    400028: ground02
-    400030: path01
-    400032: path02
-    400034: Perif01
-    400036: Perif02
-    400038: Perif03
-    400040: Perif04
-    400042: Perif05
-    400044: rock01
+    400022: fence03
+    400024: fence01
+    400026: fenceSign01
+    400028: path02
+    400030: fenceSign02
+    400032: creek02
+    400034: fence02
+    400036: bridge01
+    400038: path01
+    400040: creek01
+    400042: creek_waterfall
+    400044: ground02
     400046: rockMtn
-    2300000: bridge01
-    2300002: Cabin
-    2300004: Clouds
-    2300006: creek01
-    2300008: creek02
-    2300010: creek_waterfall
-    2300012: fence01
-    2300014: fence02
-    2300016: fence03
+    2300000: Perif04
+    2300002: Perif03
+    2300004: Perif05
+    2300006: Perif01
+    2300008: ground01
+    2300010: Perif02
+    2300012: Clouds
+    2300014: rock01
+    2300016: Cabin
     2300018: fence04
-    2300020: fenceSign01
-    2300022: fenceSign02
-    2300024: ground01
-    2300026: ground02
-    2300028: path01
-    2300030: path02
-    2300032: Perif01
-    2300034: Perif02
-    2300036: Perif03
-    2300038: Perif04
-    2300040: Perif05
-    2300042: rock01
+    2300020: fence03
+    2300022: fence01
+    2300024: fenceSign01
+    2300026: path02
+    2300028: fenceSign02
+    2300030: creek02
+    2300032: fence02
+    2300034: bridge01
+    2300036: path01
+    2300038: creek01
+    2300040: creek_waterfall
+    2300042: ground02
     2300044: rockMtn
-    3300000: bridge01
-    3300002: Cabin
-    3300004: Clouds
-    3300006: creek01
-    3300008: creek02
-    3300010: creek_waterfall
-    3300012: fence01
-    3300014: fence02
-    3300016: fence03
+    3300000: Perif04
+    3300002: Perif03
+    3300004: Perif05
+    3300006: Perif01
+    3300008: ground01
+    3300010: Perif02
+    3300012: Clouds
+    3300014: rock01
+    3300016: Cabin
     3300018: fence04
-    3300020: fenceSign01
-    3300022: fenceSign02
-    3300024: ground01
-    3300026: ground02
-    3300028: path01
-    3300030: path02
-    3300032: Perif01
-    3300034: Perif02
-    3300036: Perif03
-    3300038: Perif04
-    3300040: Perif05
-    3300042: rock01
+    3300020: fence03
+    3300022: fence01
+    3300024: fenceSign01
+    3300026: path02
+    3300028: fenceSign02
+    3300030: creek02
+    3300032: fence02
+    3300034: bridge01
+    3300036: path01
+    3300038: creek01
+    3300040: creek_waterfall
+    3300042: ground02
     3300044: rockMtn
     4300000: ground02
     4300002: rockMtn
@@ -122,25 +120,20 @@ ModelImporter:
     4300040: Perif03
     4300042: Perif04
     4300044: Perif05
-    9500000: //RootNode
+    11100000: //RootNode
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 3
     materialSearch: 1
   animations:
-    legacyGenerateAnimations: 4
+    legacyGenerateAnimations: 3
     bakeSimulation: 0
-    resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    animationImportErrors: 
-    animationImportWarnings: 
-    animationRetargetingWarnings: 
-    animationDoRetargetingWarnings: 0
     animationCompression: 1
-    animationRotationError: 0.5
-    animationPositionError: 0.5
-    animationScaleError: 0.5
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     clipAnimations: []
@@ -152,38 +145,33 @@ ModelImporter:
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
-    keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15.000001
+    secondaryUVAreaDistortion: 15
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 3
+    tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
     human: []
     skeleton: []
-    armTwist: 0.5
-    foreArmTwist: 0.5
-    upperLegTwist: 0.5
-    legTwist: 0.5
-    armStretch: 0.05
-    legStretch: 0.05
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
-    hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
-  humanoidOversampling: 1
+  animationType: 1
   additionalBone: 0
   userData: 
-  assetBundleName: 
-  assetBundleVariant: 

@@ -51,6 +51,7 @@ public class UWKPlugin
         app["userAgent"] = UWKConfig.UserAgent;
         app["productVersion"] = UWKConfig.UserAgentProductVersion;
         app["debugPort"] = UWKConfig.ChromiumDebugPort;
+        app["webSecurity"] = UWKConfig.WebSecurity;
 
         //app["imeEnabled"] = UWKCore.IMEEnabled;
 
@@ -203,6 +204,13 @@ public class UWKPlugin
     [DllImport("UWKPlugin")]
     public static extern void UWK_MsgSetZoomLevel(uint browserID, float zoom);
 
+    #region Cookie Management
+
+    [DllImport("UWKPlugin")]
+    public static extern void UWK_ClearCookies([MarshalAs(UnmanagedType.LPStr)]String url, [MarshalAs(UnmanagedType.LPStr)]String cookieName);
+
+    #endregion
+
     [DllImport("UWKPlugin")]
     public static extern void UWK_SetGlobalBoolProperty([MarshalAs(UnmanagedType.LPStr)]String globalVarName, [MarshalAs(UnmanagedType.LPStr)]String propertyName, bool value);
 
@@ -211,6 +219,14 @@ public class UWKPlugin
 
     [DllImport("UWKPlugin")]
     public static extern void UWK_SetGlobalStringProperty([MarshalAs(UnmanagedType.LPStr)]String globalVarName, [MarshalAs(UnmanagedType.LPStr)]String propertyName, [MarshalAs(UnmanagedType.LPStr)]String value);
+
+    // Keyboard
+
+    [DllImport("UWKPlugin")]
+    public static extern void UWK_FocusView(uint browserID);
+
+    [DllImport("UWKPlugin")]
+    public static extern void UWK_EnableKeyboard(bool enabled);
 
     // Variant Maps
 
